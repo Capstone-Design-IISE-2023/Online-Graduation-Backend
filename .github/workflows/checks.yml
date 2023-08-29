@@ -19,13 +19,13 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v2
             - name: Generate Environment Variables File
-                run:
+              run: |
                   echo "DB_NAME=$DB_NAME" >> .env
                   echo "DB_USER=$DB_USER" >> .env
                   echo "DB_PASSWORD=$DB_PASSWORD" >> .env
                   echo "DB_HOST=$DB_HOST" >> .env
                   echo "DJANGO_SECRET_KEY=$DJANGO_SECRET_KEY" >> .env
-                env:
+              env:
                   DB_NAME: ${{ secrets.DB_NAME }}
                   DB_USER: ${{ secrets.DB_USER }}
                   DB_PASSWORD: ${{ secrets.DB_PASSWORD }}
