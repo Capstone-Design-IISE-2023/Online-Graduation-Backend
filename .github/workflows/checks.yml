@@ -19,7 +19,7 @@ jobs:
             - name: Checkout
               uses: actions/checkout@v2
             - name: Generate Environment Variables File
-                run: |
+                run:
                   echo "DB_NAME=$DB_NAME" >> .env
                   echo "DB_USER=$DB_USER" >> .env
                   echo "DB_PASSWORD=$DB_PASSWORD" >> .env
