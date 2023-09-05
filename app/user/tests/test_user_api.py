@@ -33,7 +33,7 @@ class PublicUserApiTests(TestCase):
         res = self.client.post(CREATE_USER_URL, payload)
 
         self.assertEquals(res.status_code, status.HTTP_201_CREATED)
-        user = get_user_model().objects.get(email = payload['email'])
+        user = get_user_model().objects.get(email=payload['email'])
         self.assertTrue(user.check_password(payload['password']))
         self.assertNotIn('password', res.data)
 
@@ -125,8 +125,8 @@ class PrivateUserApiTests(TestCase):
     def setUp(self):
         self.user = create_user(
             email='test@example.com',
-            password = 'p@ssword',
-            name = 'test user',
+            password='p@ssword',
+            name='test user',
         )
         self.client = APIClient()
         self.client.force_authenticate(user=self.user)
