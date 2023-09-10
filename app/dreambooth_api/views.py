@@ -3,13 +3,13 @@ from django.shortcuts import render
 import requests
 import json
 
-def fine_tune(request):
+def dreambooth_fine_tune(request):
     if request.method == 'POST':
         url = "https://stablediffusionapi.com/api/v3/fine_tune"
 
         payload = json.dumps({
-            "key": "Lax6AMj3Pcija31Rwh8ILndFLiGioOu99oSEPKnK9bcTRWjkXknBLcgwROI8",  # DreamBooth API 키를 넣어주세요.
-            "instance_prompt": request.POST['instance_prompt'],
+            "key": "Lax6AMj3Pcija31Rwh8ILndFLiGioOu99oSEPKnK9bcTRWjkXknBLcgwROI8",  # Dreambooth API KEY
+            "instance_prompt": request.POST['instance_prompt'], # prompt 확인 필요
             "class_prompt": request.POST['class_prompt'],
             "base_model_id": "portraitplus-diffusion",
             "images": request.POST['images'].split(),  # 이미지 URL을 리스트로 변환

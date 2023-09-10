@@ -20,6 +20,7 @@ from drf_spectacular.views import SpectacularAPIView, SpectacularSwaggerView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('fine_tune/', include('dreambooth_api.urls')),
     # path("user/", include("user.urls")),
     # path("sign-up/", views.SignupView.as_view(), name="create"),
     # path('api/schema/', SpectacularAPIView.as_view(), name='api-schema'),
