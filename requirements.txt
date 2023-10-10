@@ -6,4 +6,4 @@ pillow==10.0.0
 django-storages[google]
 google-auth
 google-api-python-client
-drf_yasg
+drf_yasg==1.21.7
