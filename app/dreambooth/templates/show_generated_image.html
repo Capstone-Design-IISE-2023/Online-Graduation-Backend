@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Generated Image</title>
+</head>
+<body>
+    <h1>Generated Image</h1>
+
+    {% if image_instance %}
+    <img src="{{ image_instance.generated_image.url }}" alt="Generated Image">
+    {% else %}
+    <p>No generated image found.</p>
+    {% endif %}
+
+    <p><a href="{% url 'generate_dreambooth' %}">Back to Upload</a></p>
+</body>
+</html>

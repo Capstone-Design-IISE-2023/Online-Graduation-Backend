@@ -1,6 +1,8 @@
+# urls.py
+
 from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.dreambooth_fine_tune, name='fine_tue')
+    path('generate/', views.generate_dreambooth, name='generate_dreambooth'),  # 'fine_tue'를 'generate_dreambooth'로 수정
 ]
