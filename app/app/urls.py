@@ -30,4 +30,5 @@ urlpatterns = [
         name='api-docs'
     ),
     path('api/user/', include('user.urls')),
+    path('generate/', include('dreambooth.urls')),
 ]
